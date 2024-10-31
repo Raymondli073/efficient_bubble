@@ -1,0 +1,102 @@
+title: exuber
+url: https://kvasilopoulos.github.io/exuber
+
+template:
+  params:
+    ganalytics: UA-129604855-4
+    bootswatch: cosmo
+    docsearch:
+      api_key: 3da85b7c10c52498fbaeb87339345e28
+      index_name: exuber
+
+authors:
+  Kostas Vasilopoulos:
+    href: https://kvasilopoulos.com/
+  Efthymios Pavlidis:
+    href: https://sites.google.com/site/etpavlidis/
+  Enrique Martínez-García:
+    href: https://sites.google.com/view/emgeconomics
+
+reference:
+
+  - title: Package
+    contents:
+      - exuber
+      - install_exuberdata
+
+  - title: Recursive Augmented Dickey Fuller
+    desc: >
+      Estimation & Critical Values
+    contents:
+      - radf
+      - radf_mc_cv
+      - radf_wb_cv
+      - radf_sb_cv
+      - radf_crit
+
+  - title: Analysis
+    contents:
+      - summary.radf_obj
+      - diagnostics
+      - datestamp
+
+  - title: Plotting
+    contents:
+      - autoplot.radf_obj
+      - autoplot.radf_distr
+      - autoplot.ds_radf
+
+  - title: Simulation
+    contents:
+      - sim_psy1
+      - sim_psy2
+      - sim_blan
+      - sim_evans
+      - sim_div
+
+  - title: Helpers
+    contents:
+      - psy_minw
+      - index
+      - series_names
+
+  - title: Extra tidying methods
+    contents:
+      - tidy_join
+
+
+navbar:
+  type: default
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    right:
+    - news
+    - github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    intro:
+      text: Intro
+      href: articles/exuber.html
+    articles:
+      text: Vignettes
+      menu:
+      - text: Simulation
+        href: articles/simulation.html
+      - text: Plotting
+        href: articles/plotting.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    news:
+      text: News
+      href: news/index.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/kvasilopoulos/exuber
