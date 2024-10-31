@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // rls_gsadf
 arma::vec rls_gsadf(const arma::mat& yxmat, int min_win, int lag);
-RcppExport SEXP _exuber_rls_gsadf(SEXP yxmatSEXP, SEXP min_winSEXP, SEXP lagSEXP) {
+RcppExport SEXP _efficient_bubble_rls_gsadf(SEXP yxmatSEXP, SEXP min_winSEXP, SEXP lagSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -21,11 +21,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_exuber_rls_gsadf", (DL_FUNC) &_exuber_rls_gsadf, 3},
+    {"_efficient_bubble_rls_gsadf", (DL_FUNC) &_efficient_bubble_rls_gsadf, 3},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_exuber(DllInfo *dll) {
+RcppExport void R_init_efficient_bubble(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
